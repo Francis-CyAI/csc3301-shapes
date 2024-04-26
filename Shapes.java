@@ -30,9 +30,9 @@ abstract class Polygon extends Shape {
     /**
      * @Author Francis Kalunga
      */
-    private double l; // length
-    private double h; // height
-    private double[] sides; // = {l, h, ...};
+    private double[] sides; // = {12.5, 14, ...};
+    // private double l = sides[0]; // length
+    // private double h = sides[1]; // height
 
     @Override
     public double getPerimeter() {
