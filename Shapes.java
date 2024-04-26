@@ -21,9 +21,9 @@ abstract class Shape {
      * This is the base shape class from which all other shape classes will inherit.
      * @author Francis Kalunga
      */
-    public abstract double perimeter();
+    public abstract double getPerimeter();
 
-    public abstract double area();
+    public abstract double getArea();
 }
 
 abstract class Polygon extends Shape {
@@ -34,6 +34,7 @@ abstract class Polygon extends Shape {
     private double h; // height
     private double[] sides; // = {l, h, ...};
 
+    @Override
     public double getPerimeter() {
         double p = 0;
         for (int i = 0; i < sides.length; i++) {
@@ -41,6 +42,4 @@ abstract class Polygon extends Shape {
         }
         return p;
     }
-
-    public abstract double getArea();
 }
