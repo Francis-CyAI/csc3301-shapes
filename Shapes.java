@@ -25,3 +25,22 @@ abstract class Shape {
 
     public abstract double area();
 }
+
+abstract class Polygon extends Shape {
+    /**
+     * @Author Francis Kalunga
+     */
+    private double l; // length
+    private double h; // height
+    private double[] sides; // = {l, h, ...};
+
+    public double getPerimeter() {
+        double p = 0;
+        for (int i = 0; i < sides.length; i++) {
+            p += sides[i];
+        }
+        return p;
+    }
+
+    public abstract double getArea();
+}
