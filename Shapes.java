@@ -12,13 +12,13 @@ public class Shapes {
             // ...
         } while (true);
     }
-    
-}
 
+}
 
 abstract class Shape {
     /**
      * This is the base shape class from which all other shape classes will inherit.
+     * 
      * @author Francis Kalunga
      */
     public abstract double getPerimeter();
@@ -30,7 +30,7 @@ abstract class Polygon extends Shape {
     /**
      * @Author Francis Kalunga
      */
-    private double[] sides; // = {12.5, 14, ...};
+    protected double[] sides; // = {12.5, 14, ...};
     // private double l = sides[0]; // length
     // private double h = sides[1]; // height
 
@@ -42,4 +42,27 @@ abstract class Polygon extends Shape {
         }
         return p;
     }
+}
+
+abstract class Quadrilateral extends Polygon {
+    /**
+     * @Author Mike Shatamuka
+     */
+    public Quadrilateral(double side1, double side2, double side3, double side4) {
+        sides = new double[] { side1, side2, side3, side4 };
+    }
+
+}
+
+abstract class Octagon extends Polygon {
+    /**
+     * @Author Mike Shatamuka
+     */
+    public Octagon(double sideLength) {
+        sides = new double[8];
+        for (int i = 0; i < 8; i++) {
+            sides[i] = sideLength;
+        }
+    }
+
 }
