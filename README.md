@@ -18,5 +18,5 @@ This project demonstrates how to use the JavaParser library to parse a Java sour
 2. Run the following command to compile and run the project:
 
    ```bash
-  -mvn clean compile exec:java
+   mvn clean compile exec:java
 
